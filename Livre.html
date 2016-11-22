@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>MonBook</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="js/main.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.csv.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function nbLivres()
+            {
+                //localStorage.removeItem("nombreDeLivres");
+                if (localStorage.getItem("nombreDeLivres") == null) {
+                    localStorage.setItem("nombreDeLivres", 0);
+                }
+            }
+            window.onload = nbLivres();
+
+        </script>
+        <div class="menu_sec">
+            <h1>MonBook</h1>
+            <nav>
+                <ul class="menu_nav">
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="Usager.html">Mon Compte</a></li>
+                    <li><a href="Livre.html">Les    livres</a></li>
+                    <li><a href="livresTableau.html">Liste des livres</a></li>
+                </ul>
+            </nav>
+        </div>
+        <form action="/formulaire" method="post">
+            <div>
+                <label for="titre">Titre :</label>
+                <input type="text" id="titre" name="livre_titre" required/>
+            </div>
+            
+            <div>
+                <label for="auteur">Nom de l'auteur(s) :</label>
+                <input type="text" id="auteur" name="livre_auteur" required/>
+            </div>
+            
+            <div>
+                <label for="maison">Maison d'édition :</label>
+                <input type="text" id="maison" name="livre_maison" required/>
+            </div>
+            
+            <div>
+                <label for="isbn">Code ISBN :</label>
+                <input type="number" id="isbn" name="livre_isbn" required/>
+            </div>
+            
+            <div id="genre_div">
+                <label for="genre">Genre :</label><br>
+                <input type="checkbox" id="genre" value="Policier" name="livre_genre"/>Policier<br>
+                <input type="checkbox" id="genre" value="Romance" name="livre_genre"/>Romance<br>
+                <input type="checkbox" id="genre" value="Comédie" name="livre_genre"/>Comédie<br>
+                <input type="checkbox" id="genre" value="Aventure" name="livre_genre"/>Aventure<br>
+                <input type="checkbox" id="genre" value="Suspense" name="livre_genre"/>Suspense<br>
+                <input type="checkbox" id="genre" value="Horreur" name="livre_genre"/>Horreur<br>
+           </div>
+            
+            <div>
+                <label for="code">Code bar/numéro du livre :</label>
+                <input type="number" id="code" name="livre_code" required/>
+            </div>
+            
+            <div>
+                <label for="annee">Année de parution :</label>
+                <input type="text" id="annee" name="livre_annee" required/>
+            </div>
+            
+            <div>
+                <label for="page">Nombre de page :</label>
+                <input type="number" id="page" name="livre_page" required/>
+            </div>
+            
+            <div>
+                <label for="statut">Statue du livre :</label>
+                <input type="text" id="statut" name="livre_statut"/>
+            </div>
+        
+            <div class="button">
+                <button type="reset" onclick="verificationLivre()">Envoyer le formulaire</button>
+            </div>
+        </form>
+    </body>
+</html>

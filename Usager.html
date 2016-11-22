@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>MonBook</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="js/main.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.csv.min.js"></script>
+    </head>
+    <body>
+        <div class="menu_sec">
+            <h1>MonBook</h1>
+            <nav>
+                <ul class="menu_nav">
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="Usager.html">Mon Compte</a></li>
+                    <li><a href="Livre.html">Les livres</a></li>
+                    <li><a href="livresTableau.html">Liste des livres</a></li>
+                </ul>
+            </nav>
+        </div>
+        <form action="/formulaire" method="post">
+            <div>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="user_name" required/>
+            </div>
+    
+            <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="user_prenom" required/>
+            </div>
+    
+            <div>
+                <label for="date_naissance">Date de naissance :</label>
+                <input type="date" id="date_naissance" name="date_naissance" required/>
+            </div>        
+    
+            <div>
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="user_adresse" required/>
+            </div>
+    
+            <div>
+                <label for="tel">Numéro de téléphone :</label>
+                <input type="tel" id="tel" name="user_tel" required/>
+            </div>
+    
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="user_email" required/>
+            </div>
+    
+            <div>
+                <label for="photo">Photo :</label>
+                <input type="image" id="photo" name="user_photo"/>
+            </div>
+    
+            <div>
+                <label for="matricule">Numéro de matricule :</label>
+                <input type="number" id="matricule" name="user_matricule" value="0" required/>
+            </div>
+    
+            <div>
+                <label for="panier">Articles dans le panier :</label>
+                <input type="number" id="panier" name="user_panier" value="0" required/>
+            </div>
+    
+            <div class="button">
+                <button type="submit" onclick="verificationUsager()">Envoyer le formulaire</button>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+html{
+    background-image:url(image_accueil.jpg);
+    background-size: cover;
+}
+
+table{
+    padding: 5px;
+    background:beige;
+}
+#LivresTableau{
+    position:relative;
+    margin: auto;
+    width:550px;
+    height: 700px;
+    padding:300px 450px;
+}
+body{
+    position:relative;
+    margin: auto;
+    width:1000px;
+    height: 1000px;
+}
+.menu_sec{
+    background-color: beige;
+    position:absolute;
+    top:30px;
+    left:20px;
+    padding:0 20px;
+    text-align:center;
+    margin:0;
+    border: 3px solid #000000;
+    border-radius: 1em;
+}
+.menu{
+    background-color: beige;
+    position:relative;
+    top:40%;
+    margin:0px 300px;
+    text-align:center;
+    border: 3px solid #000000;
+    border-radius: 1em;
+}
+.menu_nav{
+    padding: 0;
+    list-style-type: none;
+}
+.menu_nav li a{
+    text-decoration: none;
+    color: black;
+}
+
+form {
+background-color: beige;
+    position:relative;
+    top:25%;
+    margin:0px 300px;
+    text-align:center;
+    border: 3px solid #000000;
+    border-radius: 1em;
+    width: 400px;
+    padding: 1em;
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    
+/* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+#genre_div{
+    vertical-align: middle;
+    text-align: left;
+}
+#genre_div label{
+    text-align:center;
+}
+#genre{
+    width:50px;
+    
+}
+input, textarea {
+    
+/* Afin de s'assurer que tous les champs textuels utilisent la même police
+       Par défaut, textarea utilise une police à espacement constant */
+    font: 1em sans-serif;
+
+/* Pour donner la même dimension à tous les champs textuels */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+/* Pour harmoniser l'apparence des bordures des champs textuels */
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    
+/* Afin de rehausser les éléments actifs */
+    border-color: #000;
+}
+
+textarea {
+    
+/* Pour aligner correctement les champs multilignes et leurs étiquettes */
+    vertical-align: top;
+
+/* Pour donner assez d'espace pour entrer du texte */
+    height: 5em;
+
+/* Pour permettre aux utilisateurs de redimensionner un champ textuel horizontalement
+PS : Cela ne marche pas avec tous les navigateurs  */
+    resize: vertical;
+}
+
+.button {
+    
+/* Pour positionner les boutons de la même manière que les champs textuels */
+    padding-left: 90px; /* même dimension que les étiquettes */
+}
+
+button {
+    
+/* Cette marge représente approximativement le même espace
+que celui entre les étiquettes et les champs textuels */
+    margin-left: .5em;
+}
+

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>MonBook</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="js/main.js"></script>
+        <script src="js/jquery.js"></script>
+    </head>    
+    <body>
+        <script type="text/javascript">
+            function nbLivres()
+            {
+                //localStorage.removeItem("nombreDeLivres");
+                if (localStorage.getItem("nombreDeLivres") == null) {
+                    localStorage.setItem("nombreDeLivres", 0);
+                }
+            }
+            window.onload = nbLivres();
+            
+        </script>
+        <div class="menu">
+            <h1>MonBook</h1>
+            <nav>
+                <ul class="menu_nav">
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="Usager.html">Mon Compte</a></li>
+                    <li><a href="Livre.html">Les    livres</a></li>
+                    <li><a href="livresTableau.html">Liste des livres</a></li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>
